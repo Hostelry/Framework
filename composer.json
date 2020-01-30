@@ -1,0 +1,95 @@
+{
+    "name": "hostelry/framework",
+    "type": "project",
+    "description": "A platform built for managing Inns, Pension Houses, and Hotels.",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Gab Amba",
+            "email": "gab.amba@codingmatters.today",
+            "role": "Founder & Technologist"
+        }
+    ],
+    "support": {
+        "email": "support@codingmatters.today"
+    },
+    "require": {
+        "php": "^7.3",
+        "fideloper/proxy": "^4.2.2",
+        "fruitcake/laravel-cors": "^v1.0.3",
+        "laravel/framework": "^v6.13.1",
+        "nwidart/laravel-modules": "^6.2.0",
+        "roave/security-advisories": "dev-master",
+        "yajra/laravel-datatables-oracle": "^v9.8.0"
+    },
+    "require-dev": {
+        "facade/ignition": "^1.16.0",
+        "fzaninotto/faker": "^v1.9.1",
+        "laminas/laminas-coding-standard": "^1.0.0",
+        "laravel/tinker": "^v2.1.0",
+        "malukenho/mcbumpface": "^1.1.0",
+        "mockery/mockery": "^1.3.1",
+        "nunomaduro/collision": "^v3.0.1",
+        "phpunit/phpunit": "^8.5.2",
+        "sebastian/phpcpd": "^4.1.0"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": []
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Hostelry\\": "modules"
+        },
+        "classmap": [
+            "database/seeds",
+            "database/factories"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
+        ],
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate --ansi"
+        ],
+        "check": [
+            "@clear-all",
+            "@cs-check",
+            "@check-cpd",
+            "@test"
+        ],
+        "clear-all": [
+            "php artisan view:clear",
+            "php artisan config:clear",
+            "php artisan cache:clear"
+        ],
+        "cs-check": "phpcs",
+        "cs-fix": "phpcbf",
+        "check-cpd": "phpcpd --exclude=vendor,public,bootstrap,config --fuzzy app tests database",
+        "test": "phpunit --verbose --testdox --color=always",
+        "dump-and-seed": "php artisan migrate:fresh --seed",
+        "dump-and-seed-all": [
+            "@dump-and-seed",
+            "php artisan db:seed --class=DummyDatabaseSeeder"
+        ]
+    }
+}

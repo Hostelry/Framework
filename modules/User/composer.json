@@ -1,0 +1,25 @@
+{
+    "name": "hostelry/user",
+    "description": "",
+    "authors": [
+        {
+            "name": "Coding Matters Software Development Services",
+            "email": "support@codingmatters.today"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hostelry\\User\\Providers\\UserServiceProvider"
+            ],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Hostelry\\User\\": ""
+        }
+    }
+}
