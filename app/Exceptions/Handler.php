@@ -1,11 +1,13 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Exceptions;
 
 use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 
-class Handler extends ExceptionHandler
+final class Handler extends ExceptionHandler
 {
     /**
      * A list of the exception types that are not reported.
@@ -34,7 +36,7 @@ class Handler extends ExceptionHandler
      *
      * @throws \Exception
      */
-    public function report(Exception $exception)
+    public function report(Exception $exception) : void
     {
         parent::report($exception);
     }
