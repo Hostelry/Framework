@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-final class CreateBusinessesTable extends Migration
+final class CreateBranchesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -15,11 +15,11 @@ final class CreateBusinessesTable extends Migration
      */
     public function up() : void
     {
-        Schema::create('businesses', function (Blueprint $table) {
+        Schema::create('branches', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name')->unique();
             $table->string('slug')->unique();
-            $table->string('type')->default('inn');
+            $table->unsignedInteger('business_id');
             $table->timestamps();
         });
     }
@@ -31,6 +31,6 @@ final class CreateBusinessesTable extends Migration
      */
     public function down() : void
     {
-        Schema::dropIfExists('businesses');
+        Schema::dropIfExists('branches');
     }
 }

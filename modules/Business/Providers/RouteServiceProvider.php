@@ -1,19 +1,14 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Hostelry\Business\Providers;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 
-class RouteServiceProvider extends ServiceProvider
+final class RouteServiceProvider extends ServiceProvider
 {
-    /**
-     * The module namespace to assume when generating URLs to actions.
-     *
-     * @var string
-     */
-    protected $moduleNamespace = 'Hostelry\Business\Http\Controllers';
-
     /**
      * Called before routes are registered.
      *
@@ -21,7 +16,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot() : void
     {
         parent::boot();
     }
@@ -31,10 +26,8 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function map()
+    public function map() : void
     {
-        $this->mapApiRoutes();
-
         $this->mapWebRoutes();
     }
 
@@ -45,25 +38,9 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    protected function mapWebRoutes()
+    protected function mapWebRoutes() : void
     {
         Route::middleware('web')
-            ->namespace($this->moduleNamespace)
             ->group(module_path('Business', '/Routes/web.php'));
-    }
-
-    /**
-     * Define the "api" routes for the application.
-     *
-     * These routes are typically stateless.
-     *
-     * @return void
-     */
-    protected function mapApiRoutes()
-    {
-        Route::prefix('api')
-            ->middleware('api')
-            ->namespace($this->moduleNamespace)
-            ->group(module_path('Business', '/Routes/api.php'));
     }
 }

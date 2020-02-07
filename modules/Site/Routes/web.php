@@ -10,7 +10,7 @@ Route::get('/', Index::class)->name('index');
 Route::group(['prefix' => "plan"], function () {
     Route::get('/compare', function () {})->name('pricing');
 
-    Route::get("/starter", function() {})->name('pricing.starter');
+    Route::view("/starter", "site::plan.starter")->name('pricing.starter');
     Route::post('/starter/registration', StarterPlan::class)->name('pricing.starter.registration');
 
     Route::get("/expansion", function() {})->name('pricing.expansion');

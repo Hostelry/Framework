@@ -13,10 +13,13 @@ final class VerifyAccount extends Controller
 {
     public function __invoke(Owner $owner, Request $request) : RedirectResponse
     {
-        if ($request->post('activation_code') === $owner->activation_code) {
+        if ($owner->isValidated()) {
+            return redirect()->route('dashboard.login');
+        }
+
+        if ((! $owner->isValidated() && $request->post('activation_code') === $owner->activation_code)) {
             $owner->is_validated = true;
             $owner->save();
-            //send
 
             return redirect()->route('dashboard.login');
         }

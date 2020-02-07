@@ -1,18 +1,20 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Hostelry\User\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\Eloquent\Factory;
 
-class UserServiceProvider extends ServiceProvider
+final class UserServiceProvider extends ServiceProvider
 {
     /**
      * Boot the application events.
      *
      * @return void
      */
-    public function boot()
+    public function boot() : void
     {
         $this->registerTranslations();
         $this->registerConfig();
@@ -26,7 +28,7 @@ class UserServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function register()
+    public function register() : void
     {
         $this->app->register(RouteServiceProvider::class);
     }
@@ -36,7 +38,7 @@ class UserServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    protected function registerConfig()
+    protected function registerConfig() : void
     {
         $this->publishes([
             module_path('User', 'Config/config.php') => config_path('user.php'),
@@ -52,7 +54,7 @@ class UserServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function registerViews()
+    public function registerViews() : void
     {
         $viewPath = resource_path('views/modules/user');
 
@@ -72,7 +74,7 @@ class UserServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function registerTranslations()
+    public function registerTranslations() : void
     {
         $langPath = resource_path('lang/modules/user');
 
@@ -88,7 +90,7 @@ class UserServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function registerFactories()
+    public function registerFactories() : void
     {
         if (! app()->environment('production') && $this->app->runningInConsole()) {
             app(Factory::class)->load(module_path('User', 'Database/Factories'));
@@ -100,7 +102,7 @@ class UserServiceProvider extends ServiceProvider
      *
      * @return array
      */
-    public function provides()
+    public function provides() : array
     {
         return [];
     }
