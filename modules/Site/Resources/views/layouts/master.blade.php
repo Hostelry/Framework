@@ -52,7 +52,7 @@
         @yield('content')
         <footer class="bg-blue-100">
             <div class="container mx-auto px-6 py-12 text-secondary-500 text-center border-t border-gray-300">
-                <p>Copyright © @php echo date('Y'); @endphp <a href="https://codingmatters.today" class="text-secondary-900 font-bold underline">Coding Matters</a>. All rights reserved. | Illustrations by <a href="https://twitter.com/NinaLimpi" class="text-secondary-900 font-bold underline">Katerina Limpitsouni</a></p>
+                <p>Copyright Hostelry © @php echo date('Y'); @endphp. All rights reserved | Developed and maintained by <a href="https://codingmatters.today" class="text-secondary-900 font-bold underline">Coding Matters</a>
             </div>
         </footer>
          <script src="{{ asset('js/app.js') }}" type="text/javascript"></script>

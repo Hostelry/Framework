@@ -61,8 +61,12 @@
                             </p>
                             <p class="leading-tight">
                                 Proper replacement of linens
-                            </p><p class="leading-tight">
+                            </p>
+                            <p class="leading-tight">
                                 Proper disposal of trash.
+                            </p>
+                            <p class="leading-tight">
+                                Monitoring of Lost and Found Items
                             </p>
                         </div>
                     </div>
@@ -73,7 +77,7 @@
                           Improved warehousing
                         </span>
                             <p class="leading-tight">
-                                With automation, having an immediate feedback with the issues and concerns especially with regards to monitoring our inventory.
+                                Having immediate feedback with issues and concerns especially for expiring and out of stock goods.
                             </p>
                         </div>
                     </div>
@@ -396,7 +400,7 @@
                                                 <polyline points="22 4 12 14.01 9 11.01"></polyline>
                                             </svg>
                                         </div>
-                                        <span class="text-red-700 text-lg ml-3">Website (Up to 5 Pages)</span>
+                                        <span class="text-red-700 text-lg ml-3">Website and Social Marketing</span>
                                     </li>
                                     <li class="flex items-center">
                                         <div class=" rounded-full p-2 fill-current text-red-700" >
@@ -440,38 +444,42 @@
             <div class="flex flex-col md:flex-row items-center mb-24 md:mb-16 xl:mb-8 mt-16 md:mt-0 md:mt-16 lg:mt-0">
                 <img src="{{asset('/images/booking.svg')}}" class="md:w-1/3">
                 <div class="md:ml-16 xl:ml-32">
-                    <h4 class="text-2xl md:text-3xl font-bold text-secondary-800 mb-4">Booking Management</h4>
-                    <p class="text-secondary-700 text-lg mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam imperdiet est tellus, et consequat sem sodales id. Quisque molestie et mauris efficitur lacinia.</p>
-                    <p class="text-secondary-700 text-lg">Aliquam eget semper mi. Mauris magna risus, viverra in nulla id, placerat fermentum tellus. Aliquam non felis eu dui fermentum auctor. Aenean sed ante congue, facilisis ipsum eu, gravida lacus.</p>
+                    <h4 class="text-2xl md:text-3xl font-bold text-secondary-800 mb-4">Booking Management
+                        <p class="text-secondary-700 text-xl mb-4 font-hairline">No need to watch you clock from time-to-time.</p>
+                    </h4>
+                    <p class="text-secondary-700 text-lg">We provide alerts and notifications on each guest. Automatically monitors the time remaining, extensions, and transferring for each guest.</p>
                 </div>
             </div>
             <div class="flex flex-col-reverse md:flex-row items-center mb-24 md:mb-16 xl:mb-8">
                 <div class="md:mr-16 xl:mr-32">
-                    <h4 class="text-2xl md:text-3xl font-bold text-secondary-800 mb-4">Inventory Management</h4>
-                    <p class="text-secondary-700 text-lg mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam imperdiet est tellus, et consequat sem sodales id. Quisque molestie et mauris efficitur lacinia.</p>
-                    <p class="text-secondary-700 text-lg">Aliquam eget semper mi. Mauris magna risus, viverra in nulla id, placerat fermentum tellus. Aliquam non felis eu dui fermentum auctor. Aenean sed ante congue, facilisis ipsum eu, gravida lacus.</p>
+                    <h4 class="text-2xl md:text-3xl font-bold text-secondary-800 mb-4">Inventory Management
+                        <p class="text-secondary-700 text-xl mb-4 font-hairline">Your stocks won't go to waste! We will keep you updated in near real-time.</p>
+                    </h4>
+                    <p class="text-secondary-700 text-lg">Making sure your supplies are fresh and enough to run on day-to-day operations. We alert and notifies you for a possible shortage of stocks and be able to create a purchase request on your behalf.</p>
                 </div>
                 <img src="{{asset('/images/inventory.svg')}}" class="md:w-1/3">
             </div>
             <div class="flex flex-col md:flex-row items-center mb-24 md:mb-16 xl:mb-8 mt-16 md:mt-0 md:mt-16 lg:mt-0">
                 <img src="{{asset('/images/employees.svg')}}" class="md:w-1/3">
                 <div class="md:ml-16 xl:ml-32">
-                    <h4 class="text-2xl md:text-3xl font-bold text-secondary-800 mb-4">Employee Management</h4>
-                    <p class="text-secondary-700 text-lg mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam imperdiet est tellus, et consequat sem sodales id. Quisque molestie et mauris efficitur lacinia.</p>
-                    <p class="text-secondary-700 text-lg">Aliquam eget semper mi. Mauris magna risus, viverra in nulla id, placerat fermentum tellus. Aliquam non felis eu dui fermentum auctor. Aenean sed ante congue, facilisis ipsum eu, gravida lacus.</p>
+                    <h4 class="text-2xl md:text-3xl font-bold text-secondary-800 mb-4">Employee Management
+                        <p class="text-secondary-700 text-xl mb-4 font-hairline">Who's IN and Who's OUT?</p>
+                    </h4>
+                    <p class="text-secondary-700 text-lg">Ease of monitoring your employees while organizing their day-off, attendance, payroll processing, deductions and more.</p>
                 </div>
             </div>
             <div class="flex flex-col-reverse md:flex-row items-center mb-24 md:mb-16 xl:mb-8">
                 <div class="md:mr-16 xl:mr-32">
-                    <h4 class="text-2xl md:text-3xl font-bold text-secondary-800 mb-4">Business Intelligence Tools</h4>
-                    <p class="text-secondary-700 text-lg mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam imperdiet est tellus, et consequat sem sodales id. Quisque molestie et mauris efficitur lacinia.</p>
-                    <p class="text-secondary-700 text-lg">Aliquam eget semper mi. Mauris magna risus, viverra in nulla id, placerat fermentum tellus. Aliquam non felis eu dui fermentum auctor. Aenean sed ante congue, facilisis ipsum eu, gravida lacus.</p>
+                    <h4 class="text-2xl md:text-3xl font-bold text-secondary-800 mb-4">Business Intelligence Tools
+                        <p class="text-secondary-700 text-xl mb-4 font-hairline">Personalized data analysis to know your business more.</p>
+                    </h4>
+                    <p class="text-secondary-700 text-lg">Analyzing each event that happens in your business in near real-time gives you peace of mind and knowing what's doing good and what are the problems and bottlenecks in your day-to-day operations can help you create policies and solutions.</p>
                 </div>
                 <img src="{{asset('/images/monitoring.svg')}}" class="md:w-1/3">
             </div>
         </div>
     </div>
-    <div id="partners" class="relative pb-24">
+    <div id="partners" class="relative bg-blue-100 pb-24">
         <div class="mt-16">
             <div class="pt-16 pb-16 md:pb-32 relative">
                 <img src="/images/overview.svg" class="w-full absolute bottom-full h-16 lg:h-auto object-cover object-top opacity-25">
@@ -479,7 +487,7 @@
                     <div class="md:w-2/3 mx-auto relative">
                         <img src="/images/quote.svg" class="absolute top-0 left-0 sm:-ml-16 -mt-4">
                         <h2 class="text-center text-black text-4xl font-bold">OUR PARTNERS</h2>
-                        <p class="text-black italic text-xl text-center">Join us and we will improve the quality of hospitality services in the Philippines.</p>
+                        <p class="text-black italic text-xl text-center">Join us! Together, we will improve the hospitality services in the Philippines.</p>
                     </div>
                 </div>
             </div>
@@ -497,13 +505,74 @@
         <br>
         <br>
     </div>
-    <div id="demo" class="bg-white mt-32 py-12">
-        <div class="container mx-auto px-6 pt-12 pb-12 relative">
+    <div id="demo" class="bg-white mt-8 py-8">
+        <div class="container mx-auto px-6 pt-8 pb-12 relative">
             <div class="flex flex-col md:flex-row">
                 <div class="md:w-1/2 md:pr-8 lg:pr-16">
-                    <h3 class="text-center text-4xl text-black font-bold leading-snug tracking-wider">REQUEST A DEMO!<span class="bg-primary h-1 w-20 block mt-4"></span></h3>
-                    <p class="text-center">We love to showcase it to you personally.</p>
+                    <h3 class="text-center text-4xl text-black font-bold leading-snug tracking-wider">REQUEST A DEMO<span class="bg-primary h-1 w-20 block mt-4"></span></h3>
+                    <form method="POST" action="{{route('site.demo.request')}}">
+                        @csrf
+                        <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col my-2">
+                            <div class="w-full px-3">
+                                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="name">
+                                    Hi! I'm
+                                </label>
+                                <input required class=" no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="name" name="name">
+                            </div>
 
+                            <div class="w-full px-6">
+                                <p class="text-md font-hairline">
+                                    I have
+                                    <select name="businesses">
+                                        <option>One business</option>
+                                        <option>One business with multiple branches</option>
+                                        <option>Multiple business</option>
+                                        <option>Multiple business with multiple branches</option>
+                                    </select>
+                                    with
+                                    <select name="employees">
+                                        <option>less than 10 employees</option>
+                                        <option>10 employees</option>
+                                        <option>50 employees</option>
+                                        <option>100 employees</option>
+                                        <option>more than 100 employees</option>
+                                    </select>
+                                    and running the business in
+                                    <select name="operating">
+                                        <option>less than 1 year</option>
+                                        <option>1 year</option>
+                                        <option>2 years</option>
+                                        <option>3 years</option>
+                                        <option>5 years</option>
+                                        <option>more than 5 years</option>
+                                    </select>
+                                </p>
+                            </div>
+                            <br>
+                            <div class="w-full px-3">
+                                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="message">
+                                    Additional Information
+                                </label>
+                                <textarea required class=" no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-32 resize-none" id="message" name="message"></textarea>
+                            </div>
+                            <div class="w-full px-3">
+                                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="email">
+                                    Email
+                                </label>
+                                <input type="email" required class=" no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="email" name="email">
+                            </div>
+                            <div class="w-full px-3">
+                                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="contact-number">
+                                    Mobile Number
+                                </label>
+                                <input required class=" no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="contact-number" name="number">
+                            </div>
+                            <br>
+                            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                SEND
+                            </button>
+                        </div>
+                    </form>
                 </div>
                 <div class="md:w-1/2">
                     <img src="{{asset('/images/demo.svg')}}">

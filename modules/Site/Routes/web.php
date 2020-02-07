@@ -4,6 +4,7 @@ use Hostelry\Site\Http\Controllers\Index;
 use Hostelry\Site\Http\Controllers\Registration\StarterPlan;
 use Hostelry\Site\Http\Controllers\Registration\ExpansionPlan;
 use Hostelry\Site\Http\Controllers\Registration\DeluxePlan;
+use Hostelry\Site\Http\Controllers\DemoRequest;
 
 Route::get('/', Index::class)->name('index');
 
@@ -19,3 +20,6 @@ Route::group(['prefix' => "plan"], function () {
     Route::get("/deluxe", function() {})->name('pricing.deluxe');
     Route::post("/deluxe/registration", DeluxePlan::class)->name('pricing.deluxe.registration');
 });
+
+
+Route::post('/demo/request', DemoRequest::class)->name('demo.request');
