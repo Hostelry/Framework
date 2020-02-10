@@ -85,6 +85,7 @@ final class PackageRegistrationTest extends TestCase
     {
         Mail::fake();
         $response = $this->from(route($form))->post(route($action), $payload);
+        Mail::assertQueued(AccountConfirmation::class);
 
         $this->assertDatabaseHas('businesses', ['name' => $payload['business_name']]);
 
@@ -95,7 +96,6 @@ final class PackageRegistrationTest extends TestCase
             'username' => $payload['username'],
         ])->first();
 
-        Mail::assertQueued(AccountConfirmation::class);
 
         $response->assertRedirect(route('dashboard.verification', compact('owner')));
     }

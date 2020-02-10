@@ -10,6 +10,7 @@ use Hostelry\Business\Entities\BusinessOwner;
 use Hostelry\User\Entities\Owner;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
 
@@ -32,6 +33,7 @@ abstract class AbstractRegistration
         $owner = Owner::firstOrCreate([
             'code' => Str::uuid()->toString(),
             'username' => $request->post('username'),
+            'password' => Hash::make($request->post('password')),
             'first_name' => $request->post('first_name'),
             'middle_name' => $request->post('middle_name'),
             'last_name' => $request->post('last_name'),

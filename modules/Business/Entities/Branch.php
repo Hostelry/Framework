@@ -1,10 +1,14 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Hostelry\Business\Entities;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Branch extends Model
+final class Branch extends Model
 {
-    protected $fillable = [];
+    protected $fillable = ['code', 'name', 'slug', 'business_id'];
+
+    protected $hidden = ['id', 'coode', 'slug', 'created_at', 'updated_at'];
 }

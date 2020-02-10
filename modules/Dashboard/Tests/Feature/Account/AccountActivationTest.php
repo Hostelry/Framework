@@ -45,10 +45,11 @@ final class AccountActivationTest extends TestCase
             'middle_name' => "Unknown",
             'last_name' => "Doe",
             'username' => "johndoe@example.com",
+            'is_validated' => false,
         ]);
 
         $this->from(route('dashboard.verification', compact('owner')))
             ->post(route('dashboard.account.verify', compact('owner')), ['activation_code' => "INVALID CODE"])
-            ->assertSessionHasErrors();
+            ->assertRedirect(route('dashboard.verification', compact('owner')));
     }
 }

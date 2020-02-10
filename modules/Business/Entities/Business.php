@@ -9,4 +9,5 @@ use Illuminate\Database\Eloquent\Model;
 final class Business extends Model
 {
     protected $fillable = ['name', 'slug'];
+    protected $hidden = ['id', 'slug', 'created_at', 'updated_at'];
 }

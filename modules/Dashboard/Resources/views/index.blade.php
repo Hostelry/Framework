@@ -1,9 +1,11 @@
 @extends('dashboard::layouts.master')
 
 @section('content')
-    <h1>Hello World</h1>
+    <h1>Overview</h1>
 
-    <p>
-        This view is loaded from module: {!! config('dashboard.name') !!}
-    </p>
+    @foreach($businesses as $business)
+        <div class="">
+            {{$business->name}}
+        </div>
+    @endforeach
 @endsection

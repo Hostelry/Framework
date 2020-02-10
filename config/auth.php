@@ -41,6 +41,11 @@ return [
             'provider' => 'users',
         ],
 
+        'dashboard' => [
+            'driver' => 'session',
+            'provider' => 'owners',
+        ],
+
         'api' => [
             'driver' => 'token',
             'provider' => 'users',
@@ -71,10 +76,10 @@ return [
             'model' => \Hostelry\User\Entities\User::class,
         ],
 
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
+        'owners' => [
+            'driver' => 'eloquent',
+            'model' => \Hostelry\User\Entities\Owner::class,
+        ],
     ],
 
     /*

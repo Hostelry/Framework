@@ -20,6 +20,7 @@ final class CreateOwnersTable extends Migration
             $table->bigIncrements('id');
             $table->uuid('code');
             $table->string('username')->unique(); // as email;
+            $table->string('password');
             $table->string('first_name');
             $table->string('middle_name')->nullable();
             $table->string('last_name');

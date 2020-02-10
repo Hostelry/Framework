@@ -17,6 +17,7 @@ final class CreateBranchesTable extends Migration
     {
         Schema::create('branches', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->uuid('code')->unique();
             $table->string('name')->unique();
             $table->string('slug')->unique();
             $table->unsignedInteger('business_id');
