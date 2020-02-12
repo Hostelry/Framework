@@ -1,8 +1,9 @@
-@extends('dashboard::layouts.master')
+@extends('adminlte::page')
 
-@section('content')
+@section('content_header')
     <h1>Overview</h1>
-
+@endsection
+@section('content')
     @foreach($businesses as $business)
         <div class="">
             {{$business->name}}

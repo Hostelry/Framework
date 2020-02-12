@@ -4,6 +4,7 @@ use Hostelry\Dashboard\Http\Controllers\Registration\VerifyAccount;
 use Hostelry\Dashboard\Http\Controllers\Registration\ResendConfirmationEmail;
 use Hostelry\Dashboard\Http\Controllers\Registration\AccountValidation;
 use Hostelry\Dashboard\Http\Controllers\SignIn;
+use Hostelry\Dashboard\Http\Controllers\SignOut;
 use Hostelry\Dashboard\Http\Controllers\Index;
 
 
@@ -17,6 +18,7 @@ Route::group(['middleware' => 'guest'], function () {
 });
 
 Route::group(['middleware' => 'auth:dashboard'], function () {
+    Route::post('/logout', SignOut::class)->name('logout');
     Route::get('/', function() {
         return redirect()->route('dashboard.index');
     });
