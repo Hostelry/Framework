@@ -2,5 +2,6 @@
     "User": true,
     "Site": true,
     "Business": true,
-    "Dashboard": true
+    "Dashboard": true,
+    "Room": true
 }

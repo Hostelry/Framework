@@ -17,5 +17,7 @@ $factory->define(Owner::class, function (Faker $faker) {
         'last_name' => $faker->lastName,
         'activation_code' => Str::random(32),
         'is_validated' => true,
+        'api_token' => Str::random(32),
+        'remember_token' => Str::random(32),
     ];
 });

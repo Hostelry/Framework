@@ -40,7 +40,9 @@ final class RouteServiceProvider extends ServiceProvider
      */
     protected function mapWebRoutes() : void
     {
-        Route::middleware('web')
+        Route::middleware(['web', 'auth:dashboard'])
+            ->domain('dashboard.' . config('app.domain'))
+            ->name('dashboard.')
             ->group(module_path('Business', '/Routes/web.php'));
     }
 }

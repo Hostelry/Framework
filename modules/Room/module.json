@@ -1,0 +1,13 @@
+{
+    "name": "Room",
+    "alias": "room",
+    "description": "",
+    "keywords": [],
+    "order": 0,
+    "providers": [
+        "Hostelry\\Room\\Providers\\RoomServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

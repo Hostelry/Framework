@@ -6,7 +6,6 @@ namespace App\Http\Controllers;
 
 use App\Mail\AccountConfirmation;
 use Hostelry\Business\Entities\Business;
-use Hostelry\Business\Entities\BusinessOwner;
 use Hostelry\User\Entities\Owner;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -38,12 +37,11 @@ abstract class AbstractRegistration
             'middle_name' => $request->post('middle_name'),
             'last_name' => $request->post('last_name'),
             'activation_code' => Str::random(8),
+            'remember_token' => Str::random(32),
+            'api_token' => Str::random(32),
         ]);
 
-        BusinessOwner::firstOrCreate([
-            'business_id' => $business->id,
-            'owner_id' => $owner->id,
-        ]);
+        $owner->addBusiness($business);
 
         Mail::to($owner->username)->send(new AccountConfirmation($owner));
 
