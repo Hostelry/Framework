@@ -3,5 +3,6 @@
     "Site": true,
     "Business": true,
     "Dashboard": true,
-    "Room": true
+    "Room": true,
+    "Booking": true
 }

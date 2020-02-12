@@ -46,6 +46,11 @@ return [
             'provider' => 'owners',
         ],
 
+        'booking' => [
+            'driver' => 'session',
+            'provider' => 'employees',
+        ],
+
         'api' => [
             'driver' => 'token',
             'provider' => 'users',
@@ -79,6 +84,11 @@ return [
         'owners' => [
             'driver' => 'eloquent',
             'model' => \Hostelry\User\Entities\Owner::class,
+        ],
+
+        'employees' => [
+            'driver' => 'eloquent',
+            'model' => \Hostelry\User\Entities\Employee::class,
         ],
     ],
 

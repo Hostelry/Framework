@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Hostelry\Room\Entities;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 final class Room extends Model
 {
@@ -20,6 +21,11 @@ final class Room extends Model
         ]);
     }
 
+    public function getRouteKeyName()
+    {
+        return 'code';
+    }
+
     public function scopeStatus($query, string $status = 'available')
     {
         return $query->where(['status' => $status]);
@@ -31,5 +37,15 @@ final class Room extends Model
             ->where('room_rates.hours', '=', $hours)
             ->pluck('room_rates.rate')
             ->first();
+    }
+
+    public function rates() : HasMany
+    {
+        return $this->hasMany(RoomRate::class, 'room', 'code');
+    }
+
+    public function isAvailable() : bool
+    {
+        return 'available' == strtolower($this->status);
     }
 }

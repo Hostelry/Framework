@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Hostelry\Room\Providers;
+namespace Hostelry\Booking\Providers;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
@@ -43,7 +43,8 @@ final class RouteServiceProvider extends ServiceProvider
     protected function mapWebRoutes() : void
     {
         Route::middleware('web')
-            ->group(module_path('Room', '/Routes/web.php'));
+            ->domain('booking.'. config('app.domain'))
+            ->group(module_path('Booking', '/Routes/web.php'));
     }
 
     /**
@@ -55,10 +56,10 @@ final class RouteServiceProvider extends ServiceProvider
      */
     protected function mapApiRoutes() : void
     {
-        Route::middleware(['api', 'auth:api'])
-            ->name('api.rooms.')
-            ->domain('api.' . config('app.domain'))
-            ->prefix('rooms')
-            ->group(module_path('Room', '/Routes/api.php'));
+        Route::middleware('api')
+            ->domain('api.' . config('api.domain'))
+            ->name('api.booking.')
+            ->prefix('booking')
+            ->group(module_path('Booking', '/Routes/api.php'));
     }
 }

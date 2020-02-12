@@ -11,4 +11,9 @@ class Employee extends User
     protected $fillable = ['first_name', 'middle_name', 'last_name', 'branch_id', 'username', 'password'];
 
     protected $hidden = ['id', 'password', 'created_at', 'updated_at'];
+
+    public function token() : string
+    {
+        return $this->api_token;
+    }
 }

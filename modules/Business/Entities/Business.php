@@ -17,9 +17,9 @@ final class Business extends Model
         return 'slug';
     }
 
-    public function setupBranch() : void
+    public function setupBranch() : Branch
     {
-        Branch::firstOrCreate([
+        return Branch::firstOrCreate([
             'code' => Str::uuid()->toString(),
             'name' => $this->name,
             'slug' => Str::slug($this->name),

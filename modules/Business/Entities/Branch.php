@@ -25,17 +25,19 @@ final class Branch extends Model
         return $this->hasMany(Room::class);
     }
 
-    public function setupNumberOfRooms(int $numberOfRooms = 1) : void
-    {
+    public function setupNumberOfRoomsWithBaseRate(
+        int $numberOfRooms = 1,
+        array $rate = ['hours' => 3, 'rate' => 250.00]
+    ) : void {
+
         for ($i = 1; $i <= $numberOfRooms; $i++) {
             $room = Room::firstOrCreate([
                 'code' => Str::uuid()->toString(),
-                'number' => $i,
-                'slug' => Str::slug($i),
+                'number' => "$i",
                 'branch_id' => $this->id,
             ]);
 
-            $room->setRate();
+            $room->setRate($rate['hours'], $rate['rate']);
         }
     }
 }
