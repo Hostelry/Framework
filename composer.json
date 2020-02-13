@@ -18,7 +18,7 @@
         "fideloper/proxy": "^4.2.2",
         "fruitcake/laravel-cors": "^v1.0.3",
         "jeroennoten/laravel-adminlte": "^v3.0.8",
-        "laravel/framework": "^v6.15.0",
+        "laravel/framework": "^v6.15.1",
         "nwidart/laravel-modules": "^6.2.0",
         "roave/security-advisories": "dev-master",
         "yajra/laravel-datatables-oracle": "^v9.8.0"
